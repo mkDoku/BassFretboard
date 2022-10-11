@@ -2,31 +2,52 @@
 
 
 
+% musical symbols
+% \fl -> flat
+% \sh -> sharp
+\usepackage{musicography}
 
-%\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+% tikz
 \usepackage{tikz}
-\usetikzlibrary{positioning,shapes,shadows,arrows}
-\usetikzlibrary{decorations.markings}
-%\setikzlibrary{shapes.multipart}
-\usetikzlibrary{arrows}
-\usetikzlibrary{arrows.meta}
-\usetikzlibrary{calc}
-\usetikzlibrary{shadows}
+\usetikzlibrary{
+    positioning
+  , shapes
+  , calc
+}
 
-
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
 
 
 \begin{document}
+\tikzset{
+  notePos/.style={
+      draw
+    , circle
+    , thick
+    , minimum size=1.5cm
+  }
+}
 
-
-
-\begin{tikzpicture}
+\begin{tikzpicture}[]
 
   % strings
-  \node[ellipse, draw] (GString) {G};
-  \node[below of=GString, ellipse, draw] (DString) {D};
-  \node[below of=DString, ellipse, draw] (AString) {A};
-  \node[below of=AString, ellipse, draw] (EString) {E};
+  \node[notePos] (GString) {G};
+  \node[notePos, below=of GString] (DString) {D};
+  \node[notePos, below=of DString] (AString) {A};
+  \node[notePos, below=of AString] (EString) {E};
+
+  % 1st fret
+  \node[notePos, right=of GString] (1Aflat) {A\fl / G\sh};
+  \node[notePos, right=of DString] (1Eflat) {E};
+  \node[notePos, right=of AString] (1Bflat) {B};
+  \node[notePos, right=of EString] (1Fflat) {F};
+  
+  % fret board beginning
+  \draw ($(GString)!0.5!(1Aflat)$) + (0cm, 0.75cm) coordinate (0Top);
+  \draw ($(EString)!0.5!(1Fflat)$) + (0cm,-0.75cm) coordinate (0Bottom);
+  \draw[thick] (0Top) to (0Bottom);
+
 
 
 
