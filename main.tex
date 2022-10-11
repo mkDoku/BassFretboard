@@ -1,0 +1,39 @@
+\documentclass[crop,tikz]{standalone}% 'crop' is the default for v1.0, before it was 'preview'
+
+
+
+
+%\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,shadows,arrows}
+\usetikzlibrary{decorations.markings}
+%\setikzlibrary{shapes.multipart}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{calc}
+\usetikzlibrary{shadows}
+
+
+
+
+\begin{document}
+
+
+
+\begin{tikzpicture}
+
+  % strings
+  \node[ellipse, draw] (GString) {G};
+  \node[below of=GString, ellipse, draw] (DString) {D};
+  \node[below of=DString, ellipse, draw] (AString) {A};
+  \node[below of=AString, ellipse, draw] (EString) {E};
+
+
+
+
+
+\end{tikzpicture}
+
+
+
+\end{document}
