@@ -25,13 +25,13 @@
       draw
     , circle
     , thick
-    , minimum size=1.5cm
+    , minimum size=0.8cm
   }
 }
 
 % A _ B ! C _ D _ E ! F _ G _ A
 
-\begin{tikzpicture}[node distance=0.25cm and 0.25cm]
+\begin{tikzpicture}[node distance=0.20cm and 0.2cm]
 
   % strings
   \node[notePos] (GString) {G};
@@ -46,8 +46,8 @@
   \node[notePos, right=of EString] (1F) {F};
 
   % fret board beginning
-  \draw ($(GString)!0.5!(1A_)$) + (0cm, 0.75cm) coordinate (0Top);
-  \draw ($(EString)!0.5!(1F) $) + (0cm,-0.75cm) coordinate (0Bottom);
+  \draw ($(GString)!0.5!(1A_)$) + (0cm, 0.5cm) coordinate (0Top);
+  \draw ($(EString)!0.5!(1F) $) + (0cm,-0.5cm) coordinate (0Bottom);
   \draw[thick] (0Top) to (0Bottom);
 
   %  2nd fret
