@@ -53,6 +53,8 @@
   \node[notePos, right=of AString] (1B_) {B\fl};
   \node[notePos, right=of EString] (1F) {F};
 
+  \node[above=of 1A_] {1};
+
   % fret board beginning
   \draw ($(GString)!0.5!(1A_)$) + (0cm, 0.5cm) coordinate (0Top);
   \draw ($(EString)!0.5!(1F) $) + (0cm,-0.5cm) coordinate (0Bottom);
@@ -64,6 +66,8 @@
   \node[notePos, right=of 1B_] (2B)  {B};
   \node[notePos, right=of 1F ] (2G_) {G\fl};
 
+  \node[above=of 2A] {2};
+
   %  3rd fret
   \node[notePos, right=of 2A ] (3B_) {B\fl};
   \node[notePos, right=of 2E ] (3F)  {F};
@@ -71,12 +75,15 @@
   \node[notePos, right=of 2G_] (3G)  {G};
 
   \node[marker, below=of 3G] (Marker3) {};
+  \node[above=of 3B_] {3};
 
   %  4th fret
   \node[notePos, right=of 3B_] (4B)  {B};
   \node[notePos, right=of 3F ] (4G_) {G\fl};
   \node[notePos, right=of 3C ] (4D_) {D\fl};
   \node[notePos, right=of 3G ] (4A_) {A\fl};
+
+  \node[above=of 4B] {4};
 
   %  5th fret
   \node[notePos, right=of 4B ] (5C) {C};
@@ -85,12 +92,15 @@
   \node[notePos, right=of 4A_] (5A)  {A};
 
   \node[marker, below=of 5A] (Marker5) {};
+  \node[above=of 5C] {5};
 
   %  6th fret
   \node[notePos, right=of 5C ] (6D_) {D\fl};
   \node[notePos, right=of 5G ] (6A_) {A\fl};
   \node[notePos, right=of 5D ] (6E_) {E\fl};
   \node[notePos, right=of 5A ] (6B_) {B\fl};
+
+  \node[above=of 6D_] {6};
 
   %  7th fret
   \node[notePos, right=of 6D_] (7D) {D};
@@ -99,12 +109,15 @@
   \node[notePos, right=of 6B_] (7B) {B};
 
   \node[marker, below=of 7B] (Marker7) {};
+  \node[above=of 7D] {7};
 
   %  8th fret
   \node[notePos, right=of 7D ] (8E_) {E\fl};
   \node[notePos, right=of 7A ] (8B_) {B\fl};
   \node[notePos, right=of 7E ] (8F)  {F};
   \node[notePos, right=of 7B ] (8C)  {C};
+
+  \node[above=of 8E_] {8};
 
   %  9th fret
   \node[notePos, right=of 8E_] (9E)  {E};
@@ -113,18 +126,21 @@
   \node[notePos, right=of 8C ] (9D_) {D\fl};
 
   \node[marker, below=of 9D_] (Marker9) {};
+  \node[above=of 9E] {9};
 
   % 10th fret
   \node[notePos, right=of 9E ] (10F) {F};
   \node[notePos, right=of 9B ] (10C) {C};
   \node[notePos, right=of 9G_] (10G) {G};
   \node[notePos, right=of 9D_] (10D) {D};
+  \node[above=of 10F] {10};
 
   % 11th fret
   \node[notePos, right=of 10F] (11G_) {G\fl};
   \node[notePos, right=of 10C] (11D_) {D\fl};
   \node[notePos, right=of 10G] (11A_) {A\fl};
   \node[notePos, right=of 10D] (11E_) {E\fl};
+  \node[above=of 11G_] {11};
 
   % 12th fret
   \node[notePos, right=of 11G_] (12G) {G};
@@ -134,6 +150,7 @@
 
   \node[marker, below=of 12E] (Marker12_1) {};
   \node[marker, below=of Marker12_1] (Marker12_2) {};
+  \node[above=of 12G] {12};
 
 
 \end{tikzpicture}
