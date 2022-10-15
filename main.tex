@@ -28,6 +28,14 @@
     , minimum size=0.8cm
   }
 }
+\tikzset{
+  marker/.style={
+      draw
+    , circle
+    , fill
+    , minimum size=0.2cm
+  }
+}
 
 % A _ B ! C _ D _ E ! F _ G _ A
 
@@ -62,7 +70,7 @@
   \node[notePos, right=of 2B ] (3C)  {C};
   \node[notePos, right=of 2G_] (3G)  {G};
 
-  \node[circle, fill, minimum size=0.75cm, below=0.5cm of 3G] (Marker3) {};
+  \node[marker, below=of 3G] (Marker3) {};
 
   %  4th fret
   \node[notePos, right=of 3B_] (4B)  {B};
@@ -76,7 +84,7 @@
   \node[notePos, right=of 4D_] (5D)  {D};
   \node[notePos, right=of 4A_] (5A)  {A};
 
-  \node[circle, fill, minimum size=0.75cm, below=0.5cm of 5A] (Marker5) {};
+  \node[marker, below=of 5A] (Marker5) {};
 
   %  6th fret
   \node[notePos, right=of 5C ] (6D_) {D\fl};
@@ -90,7 +98,7 @@
   \node[notePos, right=of 6E_] (7E) {E};
   \node[notePos, right=of 6B_] (7B) {B};
 
-  \node[circle, fill, minimum size=0.75cm, below=0.5cm of 7B] (Marker7) {};
+  \node[marker, below=of 7B] (Marker7) {};
 
   %  8th fret
   \node[notePos, right=of 7D ] (8E_) {E\fl};
@@ -104,7 +112,7 @@
   \node[notePos, right=of 8F ] (9G_) {G\fl};
   \node[notePos, right=of 8C ] (9D_) {D\fl};
 
-  \node[circle, fill, minimum size=0.75cm, below=0.5cm of 9D_] (Marker9) {};
+  \node[marker, below=of 9D_] (Marker9) {};
 
   % 10th fret
   \node[notePos, right=of 9E ] (10F) {F};
@@ -124,9 +132,8 @@
   \node[notePos, right=of 11A_] (12A) {A};
   \node[notePos, right=of 11E_] (12E) {E};
 
-  \node[circle, fill, minimum size=0.75cm, below=0.5cm of 12E] (Marker12_1) {};
-  \node[circle, fill, minimum size=0.75cm, below=0.5cm of Marker12_1]
-    (Marker12_2) {};
+  \node[marker, below=of 12E] (Marker12_1) {};
+  \node[marker, below=of Marker12_1] (Marker12_2) {};
 
 
 \end{tikzpicture}
